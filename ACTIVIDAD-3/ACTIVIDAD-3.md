@@ -16,7 +16,7 @@
 4. Sumar el incremento a bacteria_totales.
 5. Imprimir el resultado.
 #### Pseudocódigo:
-Inicio
+/// Inicio
     // Definir e inicializar variables
     Leer bacterias_iniciales
     Leer tasa_crecimiento
@@ -31,7 +31,7 @@ Inicio
 
     // Imprimir el resultado
     Imprimir "Número total de bacterias después de", numero_dias, "días: ", bacterias_totales
-Fin
+Fin ///
 ## 2. Problema 5: Calcular el total de puntos obtenidos en un juego de bolos basado en las puntuaciones de cada tiro.
 ### Análisis del problema:
 1. Obtener una lista de las puntuaciones de cada tiro.
@@ -55,7 +55,7 @@ Fin
 6. Calcular puntuación normal.
 7. Imprimir resultado.
 #### Pseudocódigo:
-Inicio
+/// Inicio
     // Definir e inicializar variables
     Leer puntuaciones
     total_puntos = 0
@@ -81,7 +81,7 @@ Inicio
 
     // Imprimir el resultado
     Imprimir "Total de puntos: ", total_puntos
-Fin
+Fin ///
 ## 3. Problema 6: Calcular la edad de una persona a partir de su fecha de nacimiento y la fecha actual.
 ### Análisis del problema:
 1. Obtener fecha de nacimiento (Día, mes y año).
@@ -106,7 +106,7 @@ Fin
 6. Verificar si hoy es su cumpleaños.
 7. Imprimir resultados.
 #### Pseudocódigo:
-Inicio
+/// Inicio
     // Entrada de datos
     Leer dia_nacimiento, mes_nacimiento, año_nacimiento
     Leer dia_actual, mes_actual, año_actual
@@ -151,4 +151,4 @@ Inicio
     Imprimir "Edad: ", edad_años, " años, ", edad_meses, " meses, ", edad_días, " días"
     Imprimir "Ha cumplido años este año: ", ha_cumplido_este_año
     Imprimir "Hoy es su cumpleaños: ", es_cumpleaños_hoy
-Fin
+Fin ///
