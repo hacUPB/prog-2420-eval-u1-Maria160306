@@ -1,0 +1,25 @@
+## Pseudocódigo 
+Gastos de persona mes a mes
+/// Inicio
+    Imprimir "ingrese el valor de la compra", compra 
+    leer compra
+
+    Imprimir "ingrese la tasa de interés mensual (porcentaje)", tasafija
+    Leer tasafija
+
+    Imprimir "ingrese el número de cuotas", cuotas
+    Leer cuotas
+    
+        Calcular cuotamensual
+        cuotamensual = (compra * tasamensual) / (1 - tasamensual) - cuotas
+
+        Imprimir valor cuota mes a mes
+        Definir totalpago = 0 
+
+        Para pago mensual hacer 
+            pagomensual = cuotamensual
+            totalpago = totalpago + pagomensual
+        Fin para
+        Leer gasto total
+        Imprimir "el gasto total de:", gastototal 
+Fin ///        
