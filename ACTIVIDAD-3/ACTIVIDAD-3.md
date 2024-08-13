@@ -16,22 +16,24 @@
 4. Sumar el incremento a bacteria_totales.
 5. Imprimir el resultado.
 #### Pseudocódigo:
-/// Inicio
-    // Definir e inicializar variables
+```
+ Inicio
+    Definir e inicializar variables
     Leer bacterias_iniciales
     Leer tasa_crecimiento
     Leer numero_dias
     bacterias_totales = bacterias_iniciales
 
-    // Simulación del crecimiento diario
+    Simulación del crecimiento diario
     Para dia = 1 hasta numero_dias Hacer
         incremento = bacterias_totales * tasa_crecimiento / 100
         bacterias_totales = bacterias_totales + incremento
     FinPara
 
-    // Imprimir el resultado
+    Imprimir el resultado
     Imprimir "Número total de bacterias después de", numero_dias, "días: ", bacterias_totales
-Fin ///
+Fin 
+```  
 ## 2. Problema 5: Calcular el total de puntos obtenidos en un juego de bolos basado en las puntuaciones de cada tiro.
 ### Análisis del problema:
 1. Obtener una lista de las puntuaciones de cada tiro.
@@ -55,33 +57,35 @@ Fin ///
 6. Calcular puntuación normal.
 7. Imprimir resultado.
 #### Pseudocódigo:
-/// Inicio
-    // Definir e inicializar variables
+```
+  Inicio
+    Definir e inicializar variables
     Leer puntuaciones
     total_puntos = 0
     cuadro_actual = 1
     tiro = 0
 
-    // Iterar sobre los cuadros
+    Iterar sobre los cuadros
     Mientras cuadro_actual <= 10 Hacer
-        Si puntuaciones[tiro] == 10 Entonces // Strike
+        Si puntuaciones[tiro] == 10 Entonces Strike
             total_puntos = total_puntos + 10 + puntuaciones[tiro + 1] + puntuaciones[tiro + 2]
             tiro = tiro + 1
             cuadro_actual = cuadro_actual + 1
-        Sino Si puntuaciones[tiro] + puntuaciones[tiro + 1] == 10 Entonces // Spare
+        Sino Si puntuaciones[tiro] + puntuaciones[tiro + 1] == 10 Entonces Spare
             total_puntos = total_puntos + 10 + puntuaciones[tiro + 2]
             tiro = tiro + 2
             cuadro_actual = cuadro_actual + 1
-        Sino // Puntuación normal
+        Sino Puntuación normal
             total_puntos = total_puntos + puntuaciones[tiro] + puntuaciones[tiro + 1]
             tiro = tiro + 2
             cuadro_actual = cuadro_actual + 1
         FinSi
     FinMientras
 
-    // Imprimir el resultado
+    Imprimir el resultado
     Imprimir "Total de puntos: ", total_puntos
-Fin ///
+Fin
+``` 
 ## 3. Problema 6: Calcular la edad de una persona a partir de su fecha de nacimiento y la fecha actual.
 ### Análisis del problema:
 1. Obtener fecha de nacimiento (Día, mes y año).
@@ -106,19 +110,20 @@ Fin ///
 6. Verificar si hoy es su cumpleaños.
 7. Imprimir resultados.
 #### Pseudocódigo:
-/// Inicio
-    // Entrada de datos
+```
+  Inicio
+    Entrada de datos
     Leer dia_nacimiento, mes_nacimiento, año_nacimiento
     Leer dia_actual, mes_actual, año_actual
 
-    // Inicialización
+    Inicialización
     edad_años = 0
     edad_meses = 0
     edad_días = 0
     ha_cumplido_este_año = Falso
     es_cumpleaños_hoy = Falso
 
-    // Calcular edad en años
+    Calcular edad en años
     Si (mes_actual > mes_nacimiento) O (mes_actual = mes_nacimiento Y dia_actual >= dia_nacimiento) Entonces
         edad_años = año_actual - año_nacimiento
         ha_cumplido_este_año = Verdadero
@@ -127,14 +132,14 @@ Fin ///
         ha_cumplido_este_año = Falso
     FinSi
 
-    // Calcular los meses
+    Calcular los meses
     Si (mes_actual >= mes_nacimiento) Entonces
         edad_meses = mes_actual - mes_nacimiento
     Sino
         edad_meses = 12 - (mes_nacimiento - mes_actual)
     FinSi
 
-    // Calcular los días
+    Calcular los días
     Si (dia_actual >= dia_nacimiento) Entonces
         edad_días = dia_actual - dia_nacimiento
     Sino
@@ -142,13 +147,14 @@ Fin ///
         edad_días = (días_del_mes_anterior - dia_nacimiento) + dia_actual
     FinSi
 
-    // Verificar si hoy es el cumpleaños
+    Verificar si hoy es el cumpleaños
     Si (dia_actual = dia_nacimiento) Y (mes_actual = mes_nacimiento) Entonces
         es_cumpleaños_hoy = Verdadero
     FinSi
 
-    // Imprimir los resultados
+    Imprimir los resultados
     Imprimir "Edad: ", edad_años, " años, ", edad_meses, " meses, ", edad_días, " días"
     Imprimir "Ha cumplido años este año: ", ha_cumplido_este_año
     Imprimir "Hoy es su cumpleaños: ", es_cumpleaños_hoy
-Fin ///
+Fin
+``` 
